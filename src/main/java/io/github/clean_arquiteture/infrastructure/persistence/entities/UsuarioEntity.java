@@ -1,4 +1,4 @@
-package io.github.clean_arquiteture.infrastructure.persistence;
+package io.github.clean_arquiteture.infrastructure.persistence.entities;
 
 import io.github.clean_arquiteture.infrastructure.enumerate.PerfilEnum;
 import jakarta.persistence.Column;

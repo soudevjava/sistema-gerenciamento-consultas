@@ -1,4 +1,4 @@
-package io.github.clean_arquiteture.infrastructure.persistence;
+package io.github.clean_arquiteture.infrastructure.persistence.entities;
 
 import java.util.List;
 
