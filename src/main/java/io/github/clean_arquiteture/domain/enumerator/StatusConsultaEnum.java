@@ -1,4 +1,4 @@
-package io.github.clean_arquiteture.infrastructure.enumerate;
+package io.github.clean_arquiteture.domain.enumerator;
 
 public enum StatusConsultaEnum {
     CONFIRMADA("Confirmada"),

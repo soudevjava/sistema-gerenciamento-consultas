@@ -1,8 +1,8 @@
-package io.github.clean_arquiteture.infrastructure.persistence;
+package io.github.clean_arquiteture.infrastructure.persistence.entity;
 
 import java.time.OffsetDateTime;
 
-import io.github.clean_arquiteture.infrastructure.enumerate.StatusConsultaEnum;
+import io.github.clean_arquiteture.domain.enumerator.StatusConsultaEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;

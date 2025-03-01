@@ -1,6 +1,6 @@
-package io.github.clean_arquiteture.infrastructure.persistence;
+package io.github.clean_arquiteture.infrastructure.persistence.entity;
 
-import io.github.clean_arquiteture.infrastructure.enumerate.PerfilEnum;
+import io.github.clean_arquiteture.domain.enumerator.PerfilEnum;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
