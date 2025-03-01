@@ -11,7 +11,15 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table( name = "consulta")
 public class ConsultaEntity {
@@ -34,54 +42,4 @@ public class ConsultaEntity {
     @ManyToOne
     @JoinColumn(name = "id_medico", nullable = false)
     private MedicoEntity medico;
-
-    public ConsultaEntity() {}
-
-    public ConsultaEntity(Long id, OffsetDateTime dataConsulta, StatusConsultaEnum statusConsulta, PacienteEntity paciente, MedicoEntity medico) {
-        this.id = id;
-        this.dataConsulta = dataConsulta;
-        this.statusConsulta = statusConsulta;
-        this.paciente = paciente;
-        this.medico = medico;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public OffsetDateTime getDataConsulta() {
-        return dataConsulta;
-    }
-
-    public void setDataConsulta(OffsetDateTime dataConsulta) {
-        this.dataConsulta = dataConsulta;
-    }
-
-    public StatusConsultaEnum getStatusConsulta() {
-        return statusConsulta;
-    }
-
-    public void setStatusConsulta(StatusConsultaEnum statusConsulta) {
-        this.statusConsulta = statusConsulta;
-    }
-
-    public PacienteEntity getPaciente() {
-        return paciente;
-    }
-
-    public void setPaciente(PacienteEntity paciente) {
-        this.paciente = paciente;
-    }
-
-    public MedicoEntity getMedico() {
-        return medico;
-    }
-
-    public void setMedico(MedicoEntity medico) {
-        this.medico = medico;
-    }
 }

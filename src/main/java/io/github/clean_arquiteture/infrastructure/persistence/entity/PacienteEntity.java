@@ -3,6 +3,10 @@ package io.github.clean_arquiteture.infrastructure.persistence.entity;
 import java.time.OffsetDateTime;
 import java.util.List;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.hibernate.validator.constraints.br.CPF;
 
 import jakarta.persistence.CascadeType;
@@ -14,6 +18,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name= "paciente")
 public class PacienteEntity {
@@ -40,72 +48,4 @@ public class PacienteEntity {
 
     @OneToMany(mappedBy = "paciente", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<ConsultaEntity> consultas;
-
-    public PacienteEntity() {}
-
-    public PacienteEntity(Long id, String nome, String cpf, String endereco, String telefone, OffsetDateTime dataNascimento, List<ConsultaEntity> consultas) {
-        this.id = id;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.endereco = endereco;
-        this.telefone = telefone;
-        this.dataNascimento = dataNascimento;
-        this.consultas = consultas;
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public String getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
-
-    public String getTelefone() {
-        return telefone;
-    }
-
-    public void setTelefone(String telefone) {
-        this.telefone = telefone;
-    }
-
-    public OffsetDateTime getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(OffsetDateTime dataNascimento) {
-        this.dataNascimento = dataNascimento;
-    }
-
-    public List<ConsultaEntity> getConsultas() {
-        return consultas;
-    }
-
-    public void setConsultas(List<ConsultaEntity> consultas) {
-        this.consultas = consultas;
-    }
 }

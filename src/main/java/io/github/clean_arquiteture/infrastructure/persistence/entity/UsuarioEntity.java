@@ -7,7 +7,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
 @Entity
 @Table(name = "usuario")
 public class UsuarioEntity {
@@ -27,46 +35,4 @@ public class UsuarioEntity {
 
     @Column(nullable = false, length = 45)
     private PerfilEnum perfil;
-
-    public UsuarioEntity(Long id, String nome, String email, String senha, PerfilEnum perfil) {
-        this.id = id;
-        this.nome = nome;
-        this.email = email;
-        this.senha = senha;
-        this.perfil = perfil;
-    }
-
-    public UsuarioEntity(){}
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getSenha() {
-        return senha;
-    }
-
-    public void setSenha(String senha) {
-        this.senha = senha;
-    }
-
-    public PerfilEnum getPerfil() {
-        return perfil;
-    }
-
-    public void setPerfil(PerfilEnum perfil) {
-        this.perfil = perfil;
-    }
 }
